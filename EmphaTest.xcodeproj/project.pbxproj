@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F3B802C22A269B930016494F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C12A269B930016494F /* AppDelegate.swift */; };
 		F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C32A269B930016494F /* SceneDelegate.swift */; };
-		F3B802C62A269B930016494F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C52A269B930016494F /* ViewController.swift */; };
+		F3B802C62A269B930016494F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C52A269B930016494F /* WebViewController.swift */; };
 		F3B802C92A269B930016494F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B802C72A269B930016494F /* Main.storyboard */; };
 		F3B802CC2A269B930016494F /* EmphaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3B802CA2A269B930016494F /* EmphaTest.xcdatamodeld */; };
 		F3B802CE2A269B940016494F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B802CD2A269B940016494F /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		F3B802BE2A269B930016494F /* EmphaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmphaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B802C12A269B930016494F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B802C32A269B930016494F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3B802C52A269B930016494F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3B802C52A269B930016494F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F3B802C82A269B930016494F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3B802CB2A269B930016494F /* EmphaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmphaTest.xcdatamodel; sourceTree = "<group>"; };
 		F3B802CD2A269B940016494F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				F3B802C12A269B930016494F /* AppDelegate.swift */,
 				F3B802C32A269B930016494F /* SceneDelegate.swift */,
-				F3B802C52A269B930016494F /* ViewController.swift */,
+				F3B802C52A269B930016494F /* WebViewController.swift */,
 				F3B802C72A269B930016494F /* Main.storyboard */,
 				F3B802CD2A269B940016494F /* Assets.xcassets */,
 				F3B802CF2A269B940016494F /* LaunchScreen.storyboard */,
@@ -261,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B802C62A269B930016494F /* ViewController.swift in Sources */,
+				F3B802C62A269B930016494F /* WebViewController.swift in Sources */,
 				F3B802CC2A269B930016494F /* EmphaTest.xcdatamodeld in Sources */,
 				F3B802C22A269B930016494F /* AppDelegate.swift in Sources */,
 				F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */,
