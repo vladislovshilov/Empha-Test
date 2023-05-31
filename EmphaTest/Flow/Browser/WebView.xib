@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="EmphaTest" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="t4Y-5J-GO1" id="TFl-Ga-0Ka"/>
                 <outlet property="searchTextField" destination="sbV-j3-MQK" id="fse-Zs-6Vi"/>
                 <outlet property="view" destination="yY2-1f-Kop" id="fiu-9j-UTB"/>
                 <outlet property="webView" destination="Pp6-PR-KDX" id="EiJ-T4-Waa"/>
@@ -23,10 +24,9 @@
                 <textField opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbV-j3-MQK">
                     <rect key="frame" x="16" y="59" width="274" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="WbQ-DS-1Ce"/>
-                        <outlet property="pasteDelegate" destination="-1" id="MAw-IC-fjA"/>
                     </connections>
                 </textField>
                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-PR-KDX">
@@ -48,12 +48,17 @@
                         <action selector="historyButtonDidPress:" destination="-1" eventType="touchUpInside" id="tfa-UX-fBb"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="t4Y-5J-GO1">
+                    <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="4YR-bo-h7f"/>
             <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
+                <constraint firstItem="t4Y-5J-GO1" firstAttribute="centerX" secondItem="yY2-1f-Kop" secondAttribute="centerX" id="34P-em-hDN"/>
                 <constraint firstItem="Pp6-PR-KDX" firstAttribute="leading" secondItem="4YR-bo-h7f" secondAttribute="leading" id="3YK-oP-J2I"/>
                 <constraint firstItem="Pp6-PR-KDX" firstAttribute="top" secondItem="VV3-Ie-uwu" secondAttribute="bottom" constant="8" id="5qq-V9-sKa"/>
+                <constraint firstItem="t4Y-5J-GO1" firstAttribute="centerY" secondItem="yY2-1f-Kop" secondAttribute="centerY" id="7h3-Bi-bvK"/>
                 <constraint firstItem="Pp6-PR-KDX" firstAttribute="trailing" secondItem="4YR-bo-h7f" secondAttribute="trailing" id="HqG-Ja-ckZ"/>
                 <constraint firstItem="VV3-Ie-uwu" firstAttribute="leading" secondItem="sbV-j3-MQK" secondAttribute="trailing" constant="8" id="T2G-TE-h1W"/>
                 <constraint firstAttribute="bottom" secondItem="Pp6-PR-KDX" secondAttribute="bottom" id="fSd-uc-lhV"/>

@@ -10,13 +10,12 @@
 		F3A5AEDB2A27A755001B6111 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */; };
 		F3A5AEE12A27C77D001B6111 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEE02A27C77D001B6111 /* Coordinator.swift */; };
 		F3A5AEE32A27C94D001B6111 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A5AEE22A27C94D001B6111 /* WebView.xib */; };
-		F3A5AEEA2A27CB5B001B6111 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEE82A27CB5B001B6111 /* HistoryCell.swift */; };
-		F3A5AEEB2A27CB5B001B6111 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A5AEE92A27CB5B001B6111 /* HistoryCell.xib */; };
+		F3A5AF092A27D269001B6111 /* Empha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AF072A27D269001B6111 /* Empha.xcdatamodeld */; };
+		F3A5AF0D2A27D747001B6111 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AF0C2A27D747001B6111 /* UIHelper.swift */; };
 		F3B802C22A269B930016494F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C12A269B930016494F /* AppDelegate.swift */; };
 		F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C32A269B930016494F /* SceneDelegate.swift */; };
 		F3B802C62A269B930016494F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C52A269B930016494F /* WebViewController.swift */; };
 		F3B802C92A269B930016494F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B802C72A269B930016494F /* Main.storyboard */; };
-		F3B802CC2A269B930016494F /* EmphaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3B802CA2A269B930016494F /* EmphaTest.xcdatamodeld */; };
 		F3B802CE2A269B940016494F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B802CD2A269B940016494F /* Assets.xcassets */; };
 		F3B802D12A269B940016494F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B802CF2A269B940016494F /* LaunchScreen.storyboard */; };
 		F3B802DC2A269B940016494F /* EmphaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802DB2A269B940016494F /* EmphaTestTests.swift */; };
@@ -48,14 +47,13 @@
 		F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F3A5AEE02A27C77D001B6111 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F3A5AEE22A27C94D001B6111 /* WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
-		F3A5AEE82A27CB5B001B6111 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
-		F3A5AEE92A27CB5B001B6111 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		F3A5AF082A27D269001B6111 /* Empha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Empha.xcdatamodel; sourceTree = "<group>"; };
+		F3A5AF0C2A27D747001B6111 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F3B802BE2A269B930016494F /* EmphaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmphaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B802C12A269B930016494F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B802C32A269B930016494F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3B802C52A269B930016494F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F3B802C82A269B930016494F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F3B802CB2A269B930016494F /* EmphaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmphaTest.xcdatamodel; sourceTree = "<group>"; };
 		F3B802CD2A269B940016494F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B802D02A269B940016494F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3B802D22A269B940016494F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,8 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */,
-				F3A5AEE82A27CB5B001B6111 /* HistoryCell.swift */,
-				F3A5AEE92A27CB5B001B6111 /* HistoryCell.xib */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -129,6 +125,24 @@
 				F3B802C32A269B930016494F /* SceneDelegate.swift */,
 			);
 			path = Default;
+			sourceTree = "<group>";
+		};
+		F3A5AF0E2A27D796001B6111 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5AF0C2A27D747001B6111 /* UIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F3A5AF0F2A27D880001B6111 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5AEE02A27C77D001B6111 /* Coordinator.swift */,
+				F3A5AEDD2A27AA35001B6111 /* Browser */,
+				F3A5AEDE2A27AA3D001B6111 /* History */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		F3B802B52A269B930016494F = {
@@ -154,14 +168,12 @@
 		F3B802C02A269B930016494F /* EmphaTest */ = {
 			isa = PBXGroup;
 			children = (
-				F3A5AEDF2A27AA42001B6111 /* Default */,
-				F3A5AEDD2A27AA35001B6111 /* Browser */,
-				F3A5AEDE2A27AA3D001B6111 /* History */,
-				F3B802C72A269B930016494F /* Main.storyboard */,
+				F3A5AF0F2A27D880001B6111 /* Flow */,
+				F3A5AF0E2A27D796001B6111 /* Helpers */,
 				F3A5AEDC2A27AA2A001B6111 /* Services */,
 				F3B802F52A269ECD0016494F /* CoreData */,
 				F3B802F42A269EB70016494F /* Resources */,
-				F3A5AEE02A27C77D001B6111 /* Coordinator.swift */,
+				F3A5AEDF2A27AA42001B6111 /* Default */,
 			);
 			path = EmphaTest;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 		F3B802F42A269EB70016494F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3B802C72A269B930016494F /* Main.storyboard */,
 				F3B802CD2A269B940016494F /* Assets.xcassets */,
 				F3B802CF2A269B940016494F /* LaunchScreen.storyboard */,
 				F3B802D22A269B940016494F /* Info.plist */,
@@ -196,8 +209,8 @@
 		F3B802F52A269ECD0016494F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F3B802CA2A269B930016494F /* EmphaTest.xcdatamodeld */,
 				F3B802FC2A26A3330016494F /* CoreDataStack.swift */,
+				F3A5AF072A27D269001B6111 /* Empha.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -306,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A5AEEB2A27CB5B001B6111 /* HistoryCell.xib in Resources */,
 				F3B802D12A269B940016494F /* LaunchScreen.storyboard in Resources */,
 				F3A5AEE32A27C94D001B6111 /* WebView.xib in Resources */,
 				F3B802CE2A269B940016494F /* Assets.xcassets in Resources */,
@@ -336,13 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B802C62A269B930016494F /* WebViewController.swift in Sources */,
-				F3B802CC2A269B930016494F /* EmphaTest.xcdatamodeld in Sources */,
 				F3B802C22A269B930016494F /* AppDelegate.swift in Sources */,
 				F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */,
-				F3A5AEEA2A27CB5B001B6111 /* HistoryCell.swift in Sources */,
+				F3A5AF0D2A27D747001B6111 /* UIHelper.swift in Sources */,
 				F3B803032A27607A0016494F /* BrowsingHistoryService.swift in Sources */,
 				F3B802FD2A26A3330016494F /* CoreDataStack.swift in Sources */,
 				F3B803012A275D640016494F /* WebViewModel.swift in Sources */,
+				F3A5AF092A27D269001B6111 /* Empha.xcdatamodeld in Sources */,
 				F3A5AEDB2A27A755001B6111 /* HistoryViewController.swift in Sources */,
 				F3A5AEE12A27C77D001B6111 /* Coordinator.swift in Sources */,
 			);
@@ -688,13 +700,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F3B802CA2A269B930016494F /* EmphaTest.xcdatamodeld */ = {
+		F3A5AF072A27D269001B6111 /* Empha.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F3B802CB2A269B930016494F /* EmphaTest.xcdatamodel */,
+				F3A5AF082A27D269001B6111 /* Empha.xcdatamodel */,
 			);
-			currentVersion = F3B802CB2A269B930016494F /* EmphaTest.xcdatamodel */;
-			path = EmphaTest.xcdatamodeld;
+			currentVersion = F3A5AF082A27D269001B6111 /* Empha.xcdatamodel */;
+			path = Empha.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

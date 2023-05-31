@@ -12,6 +12,7 @@ class WebViewController: UIViewController {
     
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     let viewModel: WebViewModel
     
@@ -21,7 +22,7 @@ class WebViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("")
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -36,24 +37,17 @@ class WebViewController: UIViewController {
         viewModel.openHistory()
     }
     
-    override func canPerformUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, sender: Any?) -> Bool {
-        if let controller = fromViewController as? HistoryViewController {
-            viewModel.browseURL(controller.selectedURL)
-        }
-        return true
-    }
-    
     private func bindViewModel() {
         viewModel.updateView = { [weak self] in
             DispatchQueue.main.async {
                 guard let request = self?.viewModel.urlRequest else {
-                    let alert = UIAlertController(title: "Ooops", message: "Something went wrong. Try again", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "Ok", style: .default)
-                    alert.addAction(okAction)
+                    let alert = UIHelper.createErrorAlert()
+                    self?.activityIndicator.stopAnimating()
                     self?.present(alert, animated: true)
                     return
                 }
                 
+                self?.activityIndicator.startAnimating()
                 self?.webView.load(request)
                 self?.searchTextField.text = request.url?.description
             }
@@ -85,5 +79,14 @@ extension WebViewController: WKUIDelegate, WKNavigationDelegate {
         }
         
         decisionHandler(.allow)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        activityIndicator.stopAnimating()
+        present(UIHelper.createErrorAlert(), animated: true)
     }
 }

@@ -8,15 +8,15 @@
 import Foundation
 
 final class WebViewModel {
+    var urlRequest: URLRequest?
     var updateView: (() -> Void)?
     
-    var urlRequest: URLRequest?
-    
-    private let browsingHistoryService = BrowsingHistoryService.shared
     private let coordinator: Coordinator
+    private let browsingHistoryService: BrowsingHistoryService
     
-    init(coordinator: Coordinator) {
+    init(coordinator: Coordinator, browsingHistoryService: BrowsingHistoryService) {
         self.coordinator = coordinator
+        self.browsingHistoryService = browsingHistoryService
     }
     
     func browseURL(constructedFrom string: String) {
@@ -28,7 +28,7 @@ final class WebViewModel {
         browseURL(URL(string: urlString))
     }
     
-    func browseURL(_ url: URL?) {
+    func browseURL(_ url: URL?, shouldSave: Bool = true) {
         guard let url = url else {
             print("invalid url")
             return
@@ -36,7 +36,7 @@ final class WebViewModel {
         
         urlRequest = URLRequest(url: url)
         
-        saveURL(url)
+        browsingHistoryService.saveURLToHistory(url)
         updateView?()
     }
     

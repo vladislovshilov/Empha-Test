@@ -16,7 +16,7 @@ class CoreDataStack {
     var viewContext: NSManagedObjectContext
     
     init() {
-        let container = NSPersistentContainer(name: "EmphaTest")
+        let container = NSPersistentContainer(name: "Empha")
         container.loadPersistentStores { (_, error) in
             if let error = error as NSError? {
                 fatalError("Failed to load persistent stores: \(error), \(error.userInfo)")

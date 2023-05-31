@@ -8,11 +8,9 @@
 import Foundation
 
 final class BrowsingHistoryService {
-    static let shared = BrowsingHistoryService(coreDataStack: .init())
-    
     private let coreDataStack: CoreDataStack
     
-    private init(coreDataStack: CoreDataStack) {
+    init(coreDataStack: CoreDataStack) {
         self.coreDataStack = coreDataStack
     }
     
