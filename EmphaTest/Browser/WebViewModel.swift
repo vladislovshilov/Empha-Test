@@ -8,9 +8,16 @@
 import Foundation
 
 final class WebViewModel {
-    var webViewReloadCallback: ((_ urlRequest: URLRequest) -> Void)?
+    var updateView: (() -> Void)?
+    
+    var urlRequest: URLRequest?
     
     private let browsingHistoryService = BrowsingHistoryService.shared
+    private let coordinator: Coordinator
+    
+    init(coordinator: Coordinator) {
+        self.coordinator = coordinator
+    }
     
     func browseURL(constructedFrom string: String) {
         var urlString = string
@@ -18,21 +25,26 @@ final class WebViewModel {
             urlString.insert(contentsOf: "https://", at: urlString.startIndex)
         }
         
-        guard let url = URL(string: urlString) else {
+        browseURL(URL(string: urlString))
+    }
+    
+    func browseURL(_ url: URL?) {
+        guard let url = url else {
             print("invalid url")
             return
         }
         
-        let urlRequest = URLRequest(url: url)
-        
-        webViewReloadCallback?(urlRequest)
+        urlRequest = URLRequest(url: url)
         
         saveURL(url)
+        updateView?()
     }
-    
-    func openHistory() { }
     
     func saveURL(_ url: URL) {
         browsingHistoryService.saveURLToHistory(url)
+    }
+    
+    func openHistory() {
+        coordinator.openHistory()
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F3A5AEDB2A27A755001B6111 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */; };
+		F3A5AEE12A27C77D001B6111 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEE02A27C77D001B6111 /* Coordinator.swift */; };
+		F3A5AEE32A27C94D001B6111 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A5AEE22A27C94D001B6111 /* WebView.xib */; };
+		F3A5AEEA2A27CB5B001B6111 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEE82A27CB5B001B6111 /* HistoryCell.swift */; };
+		F3A5AEEB2A27CB5B001B6111 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A5AEE92A27CB5B001B6111 /* HistoryCell.xib */; };
 		F3B802C22A269B930016494F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C12A269B930016494F /* AppDelegate.swift */; };
 		F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C32A269B930016494F /* SceneDelegate.swift */; };
 		F3B802C62A269B930016494F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C52A269B930016494F /* WebViewController.swift */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		F3A5AEE02A27C77D001B6111 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F3A5AEE22A27C94D001B6111 /* WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
+		F3A5AEE82A27CB5B001B6111 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		F3A5AEE92A27CB5B001B6111 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		F3B802BE2A269B930016494F /* EmphaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmphaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B802C12A269B930016494F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B802C32A269B930016494F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 			children = (
 				F3B802C52A269B930016494F /* WebViewController.swift */,
 				F3B803002A275D640016494F /* WebViewModel.swift */,
+				F3A5AEE22A27C94D001B6111 /* WebView.xib */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -107,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */,
+				F3A5AEE82A27CB5B001B6111 /* HistoryCell.swift */,
+				F3A5AEE92A27CB5B001B6111 /* HistoryCell.xib */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 				F3A5AEDC2A27AA2A001B6111 /* Services */,
 				F3B802F52A269ECD0016494F /* CoreData */,
 				F3B802F42A269EB70016494F /* Resources */,
+				F3A5AEE02A27C77D001B6111 /* Coordinator.swift */,
 			);
 			path = EmphaTest;
 			sourceTree = "<group>";
@@ -294,7 +306,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A5AEEB2A27CB5B001B6111 /* HistoryCell.xib in Resources */,
 				F3B802D12A269B940016494F /* LaunchScreen.storyboard in Resources */,
+				F3A5AEE32A27C94D001B6111 /* WebView.xib in Resources */,
 				F3B802CE2A269B940016494F /* Assets.xcassets in Resources */,
 				F3B802C92A269B930016494F /* Main.storyboard in Resources */,
 			);
@@ -325,10 +339,12 @@
 				F3B802CC2A269B930016494F /* EmphaTest.xcdatamodeld in Sources */,
 				F3B802C22A269B930016494F /* AppDelegate.swift in Sources */,
 				F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */,
+				F3A5AEEA2A27CB5B001B6111 /* HistoryCell.swift in Sources */,
 				F3B803032A27607A0016494F /* BrowsingHistoryService.swift in Sources */,
 				F3B802FD2A26A3330016494F /* CoreDataStack.swift in Sources */,
 				F3B803012A275D640016494F /* WebViewModel.swift in Sources */,
 				F3A5AEDB2A27A755001B6111 /* HistoryViewController.swift in Sources */,
+				F3A5AEE12A27C77D001B6111 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

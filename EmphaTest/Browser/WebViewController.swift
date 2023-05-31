@@ -11,24 +11,53 @@ import WebKit
 class WebViewController: UIViewController {
     
     @IBOutlet private weak var searchTextField: UITextField!
-    @IBOutlet private weak var historyButton: UIButton!
     @IBOutlet private weak var webView: WKWebView!
     
-    private let viewModel = WebViewModel()
+    let viewModel: WebViewModel
+    
+    init(viewModel: WebViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.uiDelegate = self
         webView.navigationDelegate = self
         
-        viewModel.webViewReloadCallback = { [weak self] request in
-            self?.webView.load(request)
-            self?.searchTextField.text = request.url?.description
-        }
+        bindViewModel()
     }
-
-    @IBAction private func historyButtonDidPress(_ sender: Any) {
+    
+    @IBAction func historyButtonDidPress(_ sender: Any) {
         viewModel.openHistory()
+    }
+    
+    override func canPerformUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, sender: Any?) -> Bool {
+        if let controller = fromViewController as? HistoryViewController {
+            viewModel.browseURL(controller.selectedURL)
+        }
+        return true
+    }
+    
+    private func bindViewModel() {
+        viewModel.updateView = { [weak self] in
+            DispatchQueue.main.async {
+                guard let request = self?.viewModel.urlRequest else {
+                    let alert = UIAlertController(title: "Ooops", message: "Something went wrong. Try again", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default)
+                    alert.addAction(okAction)
+                    self?.present(alert, animated: true)
+                    return
+                }
+                
+                self?.webView.load(request)
+                self?.searchTextField.text = request.url?.description
+            }
+        }
     }
 }
 
