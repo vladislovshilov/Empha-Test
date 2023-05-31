@@ -14,11 +14,12 @@ class WebViewController: UIViewController {
     @IBOutlet private weak var historyButton: UIButton!
     @IBOutlet private weak var webView: WKWebView!
     
-    private let viewModel = WebViewModel(browsingHistoryService: .init(coreDataStack: .init(modelName: "EmphaTest")))
+    private let viewModel = WebViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.uiDelegate = self
+        webView.navigationDelegate = self
         
         viewModel.webViewReloadCallback = { [weak self] request in
             self?.webView.load(request)
@@ -45,8 +46,15 @@ extension WebViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: - WKUIDelegate
+// MARK: - WKWebView
 
-extension WebViewController: WKUIDelegate {
-    
+extension WebViewController: WKUIDelegate, WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let url = navigationAction.request.url,
+           url.scheme != "about" {
+            viewModel.saveURL(url)
+        }
+        
+        decisionHandler(.allow)
+    }
 }

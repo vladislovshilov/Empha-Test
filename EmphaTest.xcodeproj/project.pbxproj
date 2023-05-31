@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3A5AEDB2A27A755001B6111 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */; };
 		F3B802C22A269B930016494F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C12A269B930016494F /* AppDelegate.swift */; };
 		F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C32A269B930016494F /* SceneDelegate.swift */; };
 		F3B802C62A269B930016494F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802C52A269B930016494F /* WebViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F3B802BE2A269B930016494F /* EmphaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmphaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B802C12A269B930016494F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B802C32A269B930016494F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3A5AEDC2A27AA2A001B6111 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F3B803022A27607A0016494F /* BrowsingHistoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F3A5AEDD2A27AA35001B6111 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				F3B802C52A269B930016494F /* WebViewController.swift */,
+				F3B803002A275D640016494F /* WebViewModel.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		F3A5AEDE2A27AA3D001B6111 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5AEDA2A27A755001B6111 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F3A5AEDF2A27AA42001B6111 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				F3B802C12A269B930016494F /* AppDelegate.swift */,
+				F3B802C32A269B930016494F /* SceneDelegate.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
 		F3B802B52A269B930016494F = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +143,11 @@
 		F3B802C02A269B930016494F /* EmphaTest */ = {
 			isa = PBXGroup;
 			children = (
-				F3B802C12A269B930016494F /* AppDelegate.swift */,
-				F3B802C32A269B930016494F /* SceneDelegate.swift */,
-				F3B802C52A269B930016494F /* WebViewController.swift */,
-				F3B803002A275D640016494F /* WebViewModel.swift */,
+				F3A5AEDF2A27AA42001B6111 /* Default */,
+				F3A5AEDD2A27AA35001B6111 /* Browser */,
+				F3A5AEDE2A27AA3D001B6111 /* History */,
 				F3B802C72A269B930016494F /* Main.storyboard */,
-				F3B803022A27607A0016494F /* BrowsingHistoryService.swift */,
+				F3A5AEDC2A27AA2A001B6111 /* Services */,
 				F3B802F52A269ECD0016494F /* CoreData */,
 				F3B802F42A269EB70016494F /* Resources */,
 			);
@@ -293,6 +328,7 @@
 				F3B803032A27607A0016494F /* BrowsingHistoryService.swift in Sources */,
 				F3B802FD2A26A3330016494F /* CoreDataStack.swift in Sources */,
 				F3B803012A275D640016494F /* WebViewModel.swift in Sources */,
+				F3A5AEDB2A27A755001B6111 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

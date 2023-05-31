@@ -12,24 +12,18 @@ enum CoreDataError: Error {
 }
 
 class CoreDataStack {
-    private let modelName: String
+    private var persistentContainer: NSPersistentContainer
+    var viewContext: NSManagedObjectContext
     
-    init(modelName: String) {
-        self.modelName = modelName
-    }
-    
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: self.modelName)
+    init() {
+        let container = NSPersistentContainer(name: "EmphaTest")
         container.loadPersistentStores { (_, error) in
             if let error = error as NSError? {
                 fatalError("Failed to load persistent stores: \(error), \(error.userInfo)")
             }
         }
-        return container
-    }()
-    
-    var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
+        persistentContainer = container
+        viewContext = persistentContainer.viewContext
     }
     
     func saveContext() {
@@ -40,6 +34,29 @@ class CoreDataStack {
                 let nsError = error as NSError
                 fatalError("Failed to save context: \(nsError), \(nsError.userInfo)")
             }
+        }
+    }
+    
+    func fetchEnity() -> [History] {
+//        guard let fetchRequest = T.fetchRequest() as? NSFetchRequest<T> else { return [] }
+//
+//        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+//        fetchRequest.sortDescriptors = [sortDescriptor]
+//
+//        guard let fetchedEntities = try? viewContext.fetch(fetchRequest) else { return [] }
+//
+//        return fetchedEntities
+        
+        let fetchRequest: NSFetchRequest<History> = History.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+
+        do {
+            let fetchedEntities = try viewContext.fetch(fetchRequest)
+            return fetchedEntities
+        } catch {
+            print("Error fetching entities: \(error)")
+            return []
         }
     }
 }

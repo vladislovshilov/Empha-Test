@@ -10,11 +10,7 @@ import Foundation
 final class WebViewModel {
     var webViewReloadCallback: ((_ urlRequest: URLRequest) -> Void)?
     
-    private let browsingHistoryService: BrowsingHistoryService
-    
-    init(browsingHistoryService: BrowsingHistoryService) {
-        self.browsingHistoryService = browsingHistoryService
-    }
+    private let browsingHistoryService = BrowsingHistoryService.shared
     
     func browseURL(constructedFrom string: String) {
         var urlString = string
@@ -31,8 +27,12 @@ final class WebViewModel {
         
         webViewReloadCallback?(urlRequest)
         
-        browsingHistoryService.saveURLToHistory(url)
+        saveURL(url)
     }
     
     func openHistory() { }
+    
+    func saveURL(_ url: URL) {
+        browsingHistoryService.saveURLToHistory(url)
+    }
 }

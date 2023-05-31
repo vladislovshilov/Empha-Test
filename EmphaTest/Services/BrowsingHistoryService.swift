@@ -8,9 +8,11 @@
 import Foundation
 
 final class BrowsingHistoryService {
+    static let shared = BrowsingHistoryService(coreDataStack: .init())
+    
     private let coreDataStack: CoreDataStack
     
-    init(coreDataStack: CoreDataStack) {
+    private init(coreDataStack: CoreDataStack) {
         self.coreDataStack = coreDataStack
     }
     
@@ -23,6 +25,7 @@ final class BrowsingHistoryService {
     }
     
     func loadHistory() -> [History] {
-        return []
+        let histories: [History] = coreDataStack.fetchEnity()
+        return histories
     }
 }
