@@ -17,6 +17,9 @@
 		F3B802DC2A269B940016494F /* EmphaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802DB2A269B940016494F /* EmphaTestTests.swift */; };
 		F3B802E62A269B940016494F /* EmphaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802E52A269B940016494F /* EmphaTestUITests.swift */; };
 		F3B802E82A269B940016494F /* EmphaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802E72A269B940016494F /* EmphaTestUITestsLaunchTests.swift */; };
+		F3B802FD2A26A3330016494F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B802FC2A26A3330016494F /* CoreDataStack.swift */; };
+		F3B803012A275D640016494F /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B803002A275D640016494F /* WebViewModel.swift */; };
+		F3B803032A27607A0016494F /* BrowsingHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B803022A27607A0016494F /* BrowsingHistoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		F3B802E12A269B940016494F /* EmphaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmphaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B802E52A269B940016494F /* EmphaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphaTestUITests.swift; sourceTree = "<group>"; };
 		F3B802E72A269B940016494F /* EmphaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3B802FC2A26A3330016494F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F3B803002A275D640016494F /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		F3B803022A27607A0016494F /* BrowsingHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingHistoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +110,11 @@
 				F3B802C12A269B930016494F /* AppDelegate.swift */,
 				F3B802C32A269B930016494F /* SceneDelegate.swift */,
 				F3B802C52A269B930016494F /* WebViewController.swift */,
+				F3B803002A275D640016494F /* WebViewModel.swift */,
 				F3B802C72A269B930016494F /* Main.storyboard */,
-				F3B802CD2A269B940016494F /* Assets.xcassets */,
-				F3B802CF2A269B940016494F /* LaunchScreen.storyboard */,
-				F3B802D22A269B940016494F /* Info.plist */,
-				F3B802CA2A269B930016494F /* EmphaTest.xcdatamodeld */,
+				F3B803022A27607A0016494F /* BrowsingHistoryService.swift */,
+				F3B802F52A269ECD0016494F /* CoreData */,
+				F3B802F42A269EB70016494F /* Resources */,
 			);
 			path = EmphaTest;
 			sourceTree = "<group>";
@@ -128,6 +134,25 @@
 				F3B802E72A269B940016494F /* EmphaTestUITestsLaunchTests.swift */,
 			);
 			path = EmphaTestUITests;
+			sourceTree = "<group>";
+		};
+		F3B802F42A269EB70016494F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3B802CD2A269B940016494F /* Assets.xcassets */,
+				F3B802CF2A269B940016494F /* LaunchScreen.storyboard */,
+				F3B802D22A269B940016494F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3B802F52A269ECD0016494F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F3B802CA2A269B930016494F /* EmphaTest.xcdatamodeld */,
+				F3B802FC2A26A3330016494F /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +290,9 @@
 				F3B802CC2A269B930016494F /* EmphaTest.xcdatamodeld in Sources */,
 				F3B802C22A269B930016494F /* AppDelegate.swift in Sources */,
 				F3B802C42A269B930016494F /* SceneDelegate.swift in Sources */,
+				F3B803032A27607A0016494F /* BrowsingHistoryService.swift in Sources */,
+				F3B802FD2A26A3330016494F /* CoreDataStack.swift in Sources */,
+				F3B803012A275D640016494F /* WebViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +471,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZZU2FDU5KQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmphaTest/Info.plist;
+				INFOPLIST_FILE = EmphaTest/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -471,7 +499,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZZU2FDU5KQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmphaTest/Info.plist;
+				INFOPLIST_FILE = EmphaTest/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
