@@ -37,16 +37,7 @@ class CoreDataStack {
         }
     }
     
-    func fetchEnity() -> [History] {
-//        guard let fetchRequest = T.fetchRequest() as? NSFetchRequest<T> else { return [] }
-//
-//        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//
-//        guard let fetchedEntities = try? viewContext.fetch(fetchRequest) else { return [] }
-//
-//        return fetchedEntities
-        
+    func fetchHistory() -> [History]  {
         let fetchRequest: NSFetchRequest<History> = History.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]

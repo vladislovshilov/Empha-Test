@@ -29,14 +29,17 @@ final class WebViewModel {
     }
     
     func browseURL(_ url: URL?, shouldSave: Bool = true) {
-        guard let url = url else {
-            print("invalid url")
-            return
+        if let url = url,
+           isValidURL(url) {
+            urlRequest = URLRequest(url: url)
+            
+            if shouldSave {
+                browsingHistoryService.saveURLToHistory(url)
+            }
+        } else {
+            urlRequest = nil
         }
         
-        urlRequest = URLRequest(url: url)
-        
-        browsingHistoryService.saveURLToHistory(url)
         updateView?()
     }
     
@@ -46,5 +49,11 @@ final class WebViewModel {
     
     func openHistory() {
         coordinator.openHistory()
+    }
+    
+    func isValidURL(_ url: URL) -> Bool {
+        let urlRegex = "^https?://(?:www\\.)?([\\w-]+\\.)+[\\w-]+[\\w./?=&#%+\\-]*$"
+        let urlPredicate = NSPredicate(format: "SELF MATCHES %@", urlRegex)
+        return urlPredicate.evaluate(with: url.absoluteString)
     }
 }

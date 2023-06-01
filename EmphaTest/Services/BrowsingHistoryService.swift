@@ -23,7 +23,6 @@ final class BrowsingHistoryService {
     }
     
     func loadHistory() -> [History] {
-        let histories: [History] = coreDataStack.fetchEnity()
-        return histories
+        coreDataStack.fetchHistory()
     }
 }

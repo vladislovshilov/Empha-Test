@@ -85,7 +85,7 @@ extension WebViewController: WKUIDelegate, WKNavigationDelegate {
         activityIndicator.stopAnimating()
     }
     
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         activityIndicator.stopAnimating()
         present(UIHelper.createErrorAlert(), animated: true)
     }
